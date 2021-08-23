@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+.center {
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    background-color: #42f5bc;
+    margin-left: 20%;
+    width: 50%;
+    padding: 10px;
+    color: maroon;
+  }
+.login-btn {
+    margin-left: 40%;
+}

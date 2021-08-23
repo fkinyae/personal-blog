@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+.container-fluid {
+	font-family: 'Merriweather', serif;
+	color: maroon !important;
+
+}
+.navbar { 
+	background-color: #42f5bc;
+	color: maroon !important;
+}
+
+.navbar-brand {
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	font-size: 25px;
+	color: maroon !important;
+
+}
