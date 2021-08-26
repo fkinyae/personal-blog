@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% import 'bootstrap/wtf.html'  as wtf%}
+
+
+
+{% block styles%}
+    {{ super() }}
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/comments.css')}}">
+    
+{% endblock %}
+
+{% block content %}
+
+<div class="container commens">
+
+    <div class="row">
+
+        <a class="ratings btn btn-primary back_btn" href="/">Go Back</a>
+
+    </div>
+
+    <hr>
+
+    <div class="row"> 
+        
+            {{macro.displayallComments(comments)}}        
+                     
+    </div>
+
+<hr>
+
+<div class="row text-center c_form">
+
+    {{ wtf.quick_form(comment_form) }}
+
+</div>  
+
+<hr>
+
+</div>
+
+{% endblock %}
+

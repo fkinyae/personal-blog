@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/blog.css')}}">
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <hr>
+    <div class="row" style="padding-top: 0px;">
+
+        {{macro.displayQuotes(quotes)}}
+
+    </div>
+   
+    <hr>
+
+    <div class="row">
+
+        <a class="ratings btn btn-primary" href="/blog/new">Add Blog</a>
+
+
+    </div>
+
+    <div class="row">
+                            
+        {{macro.displayBlogs(blogs)}}
+        
+
+</div>
+
+
+
+
+</div>
+
+{% endblock %}
+

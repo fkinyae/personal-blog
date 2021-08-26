@@ -1,0 +1,91 @@
+<!-- Displaying reviews macro -->
+{% macro displayBlogs(blogs) %}
+
+  
+    <div class="container">
+      <div class="row">
+        {% for blog in blogs %}
+        <div class="col-md-6">
+          <h3 style="color: maroon; font-weight:bold;"> {{blog.title}} </h3>
+
+        <h4 style="font-weight: bold;">{{blog.brief}}</h4>
+
+        <p class="desc" style="width: 50ch; overflow: hidden; white-space: wrap;text-overflow: ellipsis; ">{{blog.description}}</p>
+
+
+
+        <span>Author:</span>
+
+        <span><p style="color: maroon; font-style: italic; font-weight: bold;">{{blog.user.username}}</p></span>
+        <div>
+          <a class="ratings btn btn-primary" href="/all_comments/{{blog.id}}">Comment Section</a>
+          <a href=""></a>
+          <a class="ratings btn btn-success" href="{{url_for('main.index')}}">Delete</a>
+
+         
+
+
+        </div>
+        </div>
+       
+
+        {% endfor %}
+      </div>
+
+    </div>
+{% endmacro %}
+
+<!---displaying comments macro-->
+{% macro displayComments(comment) %}
+    {% for comment in comment  %}
+    <div class="row">
+
+      <div class="col-xs-2 col-sm-2 col-md-4 col-lg-4">
+        <h4>Author</h4>
+        <p>{{comment.user.username}}</p>
+      </div>
+      <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+        <h2> <a href="{{url_for('main.single_comment',id=comment.id)}}">{{comment.comment}}</a> </h2>
+      </div>
+    </div>
+    {% endfor %}
+{% endmacro %}
+
+
+{% macro displayallComments(comments) %}
+{{title}}
+
+    <div class="row">
+      {% for comment in comments %}
+
+      <div class="col-md-4">
+
+        <p>{{comment.comment}}</p>
+        <span><h4 ></h4>
+        </span>
+        <span style="font-style: italic; color: maroon;">Author: {{comment.user.username}}</span>
+
+     </div>
+     {% endfor %}
+
+    </div>
+    
+{% endmacro %}
+
+{% macro displayQuotes(quotes) %}
+
+    <div class="row">
+      <h5 class="text-center" style="color: maroon;">Enjoy the quotes...</h5>
+      {% for quote in quotes %}
+
+      <span >
+        <p class="text-center" style="font-style: italic;">{{quote.quote}}</p><p class="text-center" style="color: aqua;">~{{quote.author}}</p>
+      </span>
+
+        
+
+     {% endfor %}
+
+    </div>
+    
+{% endmacro %}
