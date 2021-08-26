@@ -1,9 +1,8 @@
 ## Project Name.
-### Kins-pitch App
+### The K-Blog
 
 ## Project Description.
-- This is an application that  helps us get a quick round up of international news with the ability to select and read the interesting ones
-
+- This is a flask application  that lets users subscribe to be able to write blogs and comment on other blogs
 
 
 
@@ -11,7 +10,7 @@
 The contributor of this page is Francis Mumo kinyae.
 
 ## SetUp Process 
-To run the kins-pitch   App on your machine or server , use the following steps,
+To run the The K-Blog   App on your machine or server , use the following steps,
  have git installed to be able to view the code and the commits.
  have a working internet and browser preferably chrome browser.
  You can also load the live link of the github pages and view the page sources from the developer tools (for developers.)
@@ -22,16 +21,15 @@ To run the kins-pitch   App on your machine or server , use the following steps,
  - it also uses the terminal for most of the operations
 
 ## Technologies Used.
-Built With This site is built with Python & Flask .
+Built With This site is built with Python & Flask , css, html .
 
 ## Features 
-* HomePage - This shows the list of all categories of pitches 
-                          -It also gives you also the ability to login and logout using buttons as well as display the logged in person.
-                          It also gives a logged in person to add category of pitches
+* HomePage - This shows the list of all blogs that have been written
+-sign up and sign in users
 
-*Pitch Category - This shows the list of pitches under each category and gives the option of adding a pitch
+*comment section- view and add comments
 
-*Pitch - this hows the pitch with the buttons to comment, view comments and aldo like or dislike.
+*delete - delete blogs
 
 
 ## Site Link.
@@ -55,4 +53,4 @@ Look out for this site on [livesite](https://code.visualstudio.com/)
 
 ### Licence
 Distributed under the MIT License. See LICENSE for more information,click 
-[here](https://github.com/fkinyae/kins-pitch/blob/master/LICENSE).
+[here](https://github.com/fkinyae/personal-blog/blob/master/LICENSE).

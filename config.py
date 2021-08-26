@@ -1,6 +1,7 @@
 import os
 
 class Config:
+    QUOTES_API_URL='http://quotes.stormconsultancy.co.uk/random.json'
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://kinyae:kinyae@localhost/blogs'
     UPLOAD_PHOTOS_DEST ='app/static/photos'
@@ -14,7 +15,9 @@ class Config:
     
      # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
-    SIMPLEMDE_USE_CDN = True
+    SIMPLEMDE_USE_CDN = True    
+    
+    
 
 class ProdConfig(Config):
         SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
